@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 
 public class PasswordGenerator {
 
-    public String generateNewPassword(int passwordLength) {
+    public static String generateNewPassword(int passwordLength) {
 
         String symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         SecureRandom random = new SecureRandom();
@@ -15,8 +15,6 @@ public class PasswordGenerator {
             char randomSymbol = symbols.charAt(randomIndex);
             password.append(randomSymbol);
         }
-
         return password.toString();
     }
-
 }
